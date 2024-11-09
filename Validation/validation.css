@@ -1,0 +1,105 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.form {
+    background-color: white;
+    padding: 55px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background: transparent;
+}
+
+span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.2s;
+}
+
+/* Floating label effect: moves label above input when typing or focusing */
+input:focus + span,
+input:not(:placeholder-shown) + span {
+    top: -10px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Style for error message below input */
+#fname {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+}
+
+.submit {
+    width: 100%;
+    padding: 13px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.signin {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signin a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signin a:hover {
+    text-decoration: underline;
+}
+#valid
+{
+    
+    font-size: 12px;
+    margin-bottom: 0%;
+}

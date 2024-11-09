@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="validation.css">
+</head>
+<body>
+   
+<form class="form" id="form">
+    <p class="title">Register </p>
+    
+    <div>
+        <label>
+            <input placeholder="" type="text" class="input" id="finput">
+            <span>Firstname</span>
+        </label>
+        <div id="fname" style="color: red; font-size: 12px; margin-bottom: 0%;" id="valid"></div>
+
+        <label>
+            <input placeholder="" type="text" class="input" id="linput">
+            <span>Lastname</span>
+        </label>
+        <div id="lname" style="color: red; font-size: 12px;" id="valid"></div>
+    </div>  
+    
+    <label>
+        <input placeholder="" type="email" class="input" id="emailInput">
+        <span>Email</span>
+    </label> 
+    <div id="emailError" style="color: red; font-size: 12px;" id="valid"></div>
+        
+    <label>
+        <input placeholder="" type="password" class="input" id="pass">
+        <span>Password</span>
+    </label>
+    <div id="passError" style="color: red; font-size: 12px;" id="valid"></div>
+
+    <label>
+        <input placeholder="" type="password" class="input" id="cpass">
+        <span>Confirm password</span>
+    </label>
+    <div id="cpassError" style="color: red; font-size: 12px;" id="valid"></div>
+
+    <button type="submit" class="submit" id="btn" style="margin-top: 5px;" >Submit</button>
+    <p class="signin">Already have an account? <a href="#">Signin</a> </p>
+</form>
+
+<script src="validation.js"></script>
+</body>
+</html>
+
