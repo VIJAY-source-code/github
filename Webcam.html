@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <video src="" id="webcam" autoplay width="700" style="margin-left:30%; margin-top: 5%;"></video>
+    <script>
+      let webcam = document.getElementById("webcam");
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: true })
+        .then((ok) => {
+          webcam.srcObject = ok;
+        });
+    </script>
+  </body>
+</html>
