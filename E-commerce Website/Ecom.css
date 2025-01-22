@@ -1,0 +1,322 @@
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.main-heading {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.no-dots {
+  list-style-type: none;
+}
+
+.no-dots a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #e05593;
+}
+
+#navbar-links {
+  display: flex;
+  column-gap: 30px;
+}
+#navbar-links a:hover {
+  background-color: gainsboro;
+  padding: 8px;
+  border-radius: 3px;
+  transition: all 0.3s;
+  font-size: large;
+  color: darkcyan;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.services {
+  padding: 20px;
+}
+.servicescontainer-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.servicescontainer-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.servicescontainer-2 div {
+  background-color: #f2f4f7;
+  border-radius: 5px;
+  padding: 20px;
+}
+.servicescontainer-2 i:hover {
+  font-size: 50px;
+  transition: 2s ease;
+  transform: rotate(360deg);
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+  .navbar-toggle {
+    display: block;
+  }
+  #navbar-links {
+    display: none;
+  }
+  .image {
+    display: none;
+  }
+  .servicescontainer-2 {
+    flex-direction: column;
+  }
+}
+
+.side-navbar {
+  background-color: #1d232c;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  left: -40%;
+  transition: 1s;
+}
+.side-navbarlink {
+  list-style-type: none;
+}
+
+.side-navbarlink a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+.sidenav-link {
+  margin-bottom: 50px;
+}
+
+.sidenav-link a:hover {
+  text-decoration: underline;
+}
+.x-mark {
+  color: white;
+  text-align: right;
+  font-size: large;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px;
+}
+/* From Uiverse.io by adamgiebl */
+.btn {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #ff0072;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #ff0072;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ff0072;
+  z-index: -1;
+}
+
+.btn:hover,
+button:focus {
+  color: white;
+}
+
+.btn:hover:before,
+button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.servicescontainer-2 i:hover {
+  color: green;
+}
+
+/* 4 Images button */
+.color_btn {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: gainsboro;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-left: 40px;
+  position: absolute;
+  bottom: 30%;
+}
+
+.color_btn:hover {
+  background: #c4e201;
+}
+
+.color_btn > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.color_btn:hover svg {
+  transform: translateX(5px);
+}
+
+.color_btn:active {
+  transform: scale(0.95);
+}
+.picturecontainer-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.input-style {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+  width: 80vw;
+}
+
+.input-style:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* From Uiverse.io by mi-series */
+.sub-btn {
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff0072;
+  min-width: 200px;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 16px 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sub-btn:hover {
+  opacity: 0.95;
+}
+
+.sub-btn .animation {
+  border-radius: 100%;
+  animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1),
+      0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1),
+      0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),
+      0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1),
+      0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.newsheader h1 {
+  margin-left: 110px;
+}
+footer{
+  background-color: #1d232c;
+  color: white;
+  text-align: center;
+}
+
+footer i{
+  display: flex; /* Use flexbox for easy alignment */
+  justify-content: space-between; /* Space icons evenly */
+  font-size: 25px;
+  margin: 10px 10px; 
+  
+}
+footer i:hover{
+  cursor: pointer;
+
+}
+#icons1:hover{
+  color: #3b5998;
+}
+#icons2:hover{
+  color:#e4405f;
+}
+#icons3:hover{
+  color:#1da1f2;
+}
