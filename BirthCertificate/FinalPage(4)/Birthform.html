@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birth Registration Form</title>
+    <style>
+      /* Overall Styling */
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Form Container */
+      .form-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Title */
+      .form-container h1 {
+        text-align: center;
+        font-family: "Georgia", serif;
+        font-size: 2.5rem;
+        color: #1565c0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Form Paragraph */
+      .form-container p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+
+      /* Input Fields */
+      .form-container input[type="text"],
+      .form-container input[type="date"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Submit Button */
+      .form-container input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background: #1565c0;
+        color: #ffffff;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container input[type="submit"]:hover {
+        background: #0d47a1;
+      }
+
+      /* Signature Section */
+      .signature-section {
+        margin-top: 20px;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .signature-section span {
+        display: inline-block;
+        width: 150px;
+        border-bottom: 1px solid #ccc;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container" style="padding: 40px">
+      <form id="userForm">
+        <h1>BIRTH REGISTRATION</h1>
+        <p>
+          NAME:
+          <input type="text" id="name" placeholder="Full Name" required />
+          PARENT NAME:
+          <input
+            type="text"
+            id="parentName"
+            placeholder="Parent's Name"
+            required
+          />
+          CLASS:
+          <input type="text" id="class" placeholder="Class" required />
+          COLLEGE NAME:
+          <input type="text" id="school" placeholder="School Name" required />
+        </p>
+        <p>
+          DOB:
+          <input type="date" id="dob" required />
+        </p>
+        <p>
+          CITY
+          <input type="text" id="village" placeholder="City Name" required />
+          STREET NAME:
+          <input type="text" id="block" placeholder="Street Name" required />
+
+          AGE:
+          <input
+            type="text"
+            id="years"
+            placeholder="Number of Years"
+            required
+          />
+        </p>
+        <p>
+          Place: <input type="text" id="place" placeholder="Place" required />
+          <br />
+          Date: <input type="date" id="date" required />
+        </p>
+        <input type="submit" value="Download" />
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  document
+    .getElementById("userForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const username = document.getElementById("name").value;
+      const parentName = document.getElementById("parentName").value;
+      const classs = document.getElementById("class").value;
+      const school = document.getElementById("school").value;
+      const dob = document.getElementById("dob").value;
+      const village = document.getElementById("village").value;
+      const block = document.getElementById("block").value;
+      const years = document.getElementById("years").value;
+      const place = document.getElementById("place").value;
+      const date = document.getElementById("date").value;
+      // const dob = document.getElementById("dob").value;
+
+      const content = `
+
+<div style="
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    line-height: 1.6;
+">
+    <h1 style="
+        text-align: center;
+        font-family: 'Georgia', serif;
+        color: #2e7d32;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    ">
+        Birth Certificate Details
+    </h1>
+    <p style="
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 10px 0;
+        border-bottom: 1px solid #d4e157;
+    ">
+        This is to certify that <strong>Shri/Miss:</strong> <span style="color: #1b5e20;">${username}</span>, 
+        son/daughter of <strong>Shri:</strong> <span style="color: #1b5e20;">${parentName}</span>, is a student of 
+        <strong>Class:</strong> <span style="color: #1b5e20;">${classs}</span> in <strong>School:</strong> <span style="color: #1b5e20;">${school}</span>.
+    </p>
+    <p style="
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 10px 0;
+        border-bottom: 1px solid #d4e157;
+    ">
+        His/Her date of birth, as per the school record, is <strong style="color: #d84315;">${dob}</strong>.
+    </p>
+    <p style="
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 10px 0;
+        border-bottom: 1px solid #d4e157;
+    ">
+        He/She is a resident of <strong>Village:</strong> <span style="color: #1b5e20;">${village}</span>, falling in 
+        <strong>Block:</strong> <span style="color: #1b5e20;">${block}</span>, TamilNadu District, Ariyalur, and has been living here for the past 
+        <strong>${years}</strong> years.
+    </p>
+    <p style="
+        font-size: 1.2rem;
+        text-align: justify;
+        padding: 10px 0;
+    ">
+        <strong>Place:</strong> <span style="color: #1b5e20;">${place}</span><br>
+        <strong>Date:</strong> <span style="color: #d84315;">${date}</span>
+    </p>
+</div>
+`;
+
+      const blob = new Blob([content], { type: "text/html" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "Birth_Cert.html";
+      a.click();
+    });
+</script>
